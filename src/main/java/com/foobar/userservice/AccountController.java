@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/accounts")
 public class AccountController {
 
     AccountRepository accountRepository;
@@ -16,7 +16,7 @@ public class AccountController {
         this.accountRepository = accountRepository;
     }
 
-    @GetMapping("/accounts")
+    @GetMapping("")
     public List<Account> getAccount() {
         return accountRepository.findAll();
     }
